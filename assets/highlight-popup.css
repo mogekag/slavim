@@ -1,0 +1,93 @@
+/* The shadow-root's positioning wrapper spans the full viewport (position:
+   fixed; inset:0) so we can place the popup anywhere. It must not block
+   clicks/selection on the underlying page except where the popup itself is. */
+:host,
+html,
+body {
+  pointer-events: none !important;
+}
+
+.lexi-popup {
+  pointer-events: auto;
+  box-sizing: border-box;
+  background: #1f2430;
+  color: #e8eaf0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.lexi-popup * {
+  box-sizing: border-box;
+}
+
+.lexi-popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #171a22;
+  font-weight: 600;
+}
+
+.lexi-popup__word {
+  text-transform: lowercase;
+}
+
+.lexi-popup__lang {
+  font-size: 11px;
+  color: #8b93a7;
+  border: 1px solid #3a4152;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.lexi-popup__body {
+  padding: 10px 12px;
+}
+
+.lexi-popup__error {
+  color: #ff8080;
+}
+
+.lexi-popup__pos {
+  font-style: italic;
+  color: #9aa3b8;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.lexi-popup__definition {
+  margin-bottom: 6px;
+}
+
+.lexi-popup__definition a,
+.lexi-popup__example a {
+  color: #7fb0ff;
+}
+
+.lexi-popup__example {
+  color: #b8bfcf;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.lexi-popup__save {
+  width: 100%;
+  padding: 6px 10px;
+  background: #4c7cf0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lexi-popup__save:disabled {
+  background: #34405c;
+  color: #8b93a7;
+  cursor: default;
+}

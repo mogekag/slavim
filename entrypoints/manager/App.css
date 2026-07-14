@@ -1,0 +1,253 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #14161c;
+  color: #e8eaf0;
+}
+
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app__header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.app__tabs button {
+  background: none;
+  border: 1px solid #3a4152;
+  color: #e8eaf0;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.app__tabs button.active {
+  background: #4c7cf0;
+  border-color: #4c7cf0;
+}
+
+.app__filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.app__filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #9aa3b8;
+  gap: 4px;
+}
+
+.app__filters select {
+  background: #1f2430;
+  color: #e8eaf0;
+  border: 1px solid #3a4152;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.word-list__empty {
+  color: #9aa3b8;
+  padding: 24px 0;
+}
+
+.word-card {
+  border: 1px solid #2a2f3d;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.word-card__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.word-card__row:hover {
+  background: #1c202b;
+}
+
+.word-card__word {
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.word-card__lang {
+  font-size: 11px;
+  color: #9aa3b8;
+  border: 1px solid #3a4152;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.word-card__badge--learned {
+  background: #2f7d4f;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.word-card__stat {
+  color: #9aa3b8;
+  font-size: 13px;
+}
+
+.word-card__delete {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #5a3a3a;
+  color: #ff9494;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.word-card__details {
+  padding: 10px 14px;
+  border-top: 1px solid #2a2f3d;
+  background: #171a22;
+}
+
+.word-card__pos {
+  font-style: italic;
+  color: #9aa3b8;
+  margin-bottom: 4px;
+}
+
+.word-card__example {
+  color: #b8bfcf;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+/* Recall session */
+.recall-setup,
+.recall-loading,
+.recall-summary {
+  max-width: 400px;
+}
+
+.recall-setup label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.recall-setup select {
+  background: #1f2430;
+  color: #e8eaf0;
+  border: 1px solid #3a4152;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.recall-setup__error {
+  color: #ff8080;
+  margin-bottom: 10px;
+}
+
+.recall-setup__actions,
+.recall-summary__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.recall-setup__actions button,
+.recall-summary__actions button {
+  background: #4c7cf0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.recall-running__progress {
+  color: #9aa3b8;
+  margin-bottom: 12px;
+}
+
+.quiz-card {
+  border: 1px solid #2a2f3d;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 480px;
+}
+
+.quiz-card__lang {
+  font-size: 11px;
+  color: #9aa3b8;
+  margin-bottom: 8px;
+}
+
+.quiz-card__prompt {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.quiz-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-card__option {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #3a4152;
+  background: #1f2430;
+  color: #e8eaf0;
+  cursor: pointer;
+}
+
+.quiz-card__option:hover:not(:disabled) {
+  border-color: #4c7cf0;
+}
+
+.quiz-card__option--correct {
+  border-color: #2f7d4f;
+  background: #1c3327;
+}
+
+.quiz-card__option--wrong {
+  border-color: #8a3a3a;
+  background: #331c1c;
+}
+
+.quiz-card__next {
+  margin-top: 16px;
+  background: #4c7cf0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
